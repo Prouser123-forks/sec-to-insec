@@ -20,4 +20,5 @@ before_install:
   - chmod a+x ~/.docker/cli-plugins/docker-buildx
   
 install:
-  docker buildx build . --platform linux/amd64,linux/arm,linux/arm64
+  - docker buildx create --use
+  - docker buildx build . --platform linux/amd64,linux/arm,linux/arm64
