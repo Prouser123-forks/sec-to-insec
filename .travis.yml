@@ -13,11 +13,8 @@ before_install:
   - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
   - sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
   - sudo apt-get update
-  - sudo apt-get -y -o Dpkg::Options::="--force-confnew" install docker-ce wget qemu-user qemu qemu-user-static
-#  - mkdir ~/.docker
-#  - mkdir ~/.docker/cli-plugins
-#  - wget https://github.com/docker/buildx/releases/download/v0.3.1/buildx-v0.3.1.linux-amd64 -O ~/.docker/cli-plugins/docker-buildx
-#  - chmod a+x ~/.docker/cli-plugins/docker-buildx
+#  - sudo apt-get -y -o Dpkg::Options::="--force-confnew" install docker-ce wget qemu-user qemu qemu-user-static
+  - sudo apt-get -y -o Dpkg::Options::="--force-confnew" install docker-ce qemu-user-static
   
 install:
   - docker run --rm --privileged docker/binfmt:820fdd95a9972a5308930a2bdfb8573dd4447ad3
