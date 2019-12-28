@@ -8,8 +8,8 @@ env:
   - DOCKER_CLI_EXPERIMENTAL=enabled
   
   # Set your docker tag here
-  - DOCKER_TAG = "prouser123/sec-to-insec:latest"
-  - DOCKER_PLATFORMS = "linux/i386,linux/amd64,linux/arm,linux/arm64,linux/arm/v6,linux/arm/v7"
+  - DOCKER_TAG = prouser123/sec-to-insec:latest
+  - DOCKER_PLATFORMS = linux/i386,linux/amd64,linux/arm,linux/arm64,linux/arm/v6,linux/arm/v7
 
 before_install:
   - curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
