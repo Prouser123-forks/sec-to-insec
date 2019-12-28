@@ -1,5 +1,6 @@
 dist: xenial
-sudo: true
+#sudo: true
+language: minimal
 
 git:
   depth: 1
